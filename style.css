@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+    padding: 64px 16px;
+    gap: 16px;
+}
+.header {
+    color: #817D92;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.password-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #24232C;
+    padding: 17px;
+    color: #FFF;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.copy-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+#copied {
+    font-size: 18px;
+    font-weight: 700;
+    color: #A4FFAF;
+}
+.password-div img:hover {
+    filter: grayscale();
+}
+.password-div img,
+input,
+label {
+    cursor: pointer;
+}
+.password-info-container {
+    background-color: #24232C;
+    padding: 21px 16px;
+    width: 100%;
+    color: #FFF;
+}
+#password-length {
+    accent-color: #A4FFAF;
+    color: #E6E5EA;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 42px;
+}
+.password-length-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 23px;
+}
+.password-length-container span {
+    color: #A4FFAF;
+    font-size: 24px;
+}
+input:checked {
+    accent-color: #A4FFAF;
+}
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+.strength-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #18171F;
+    padding: 25px 32px;
+    margin-bottom: 32px;
+}
+.strength-container p {
+    font-size: 18px;
+    color: #817D92;
+}
+#strength-text {
+    font-size: 18px;
+    color: #FFF;
+}
+.strength-box-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.box-container {
+    display: flex;
+    gap: 8px;
+}
+.strength-box {
+    width: 10px;
+    height: 28px;
+    border: 2px solid #E6E5EA;
+}
+.generate-btn {
+    background-color: #A4FFAF;
+    width: 100%;
+    color: #24232C;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.generate-btn:active  {
+    background-color: #24232C;
+    border: 2px solid #A4FFAF;
+    color: #A4FFAF;
+}
+
+
+@media (min-width: 768px) {
+    .header {
+        font-size: 24px;
+    }
+    .password-div {
+        width: 540px;
+    }
+    .password-info-container {
+        width: 540px;
+        font-size: 18px;
+    }
+    #password {
+        font-size: 32px;
+    }
+    #strength-text {
+        font-size: 24px;
+    }
+}

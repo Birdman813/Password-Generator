@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <p class="header">Password Generator</p>
+    <div class="password-div">
+      <p id="password">P4$5W0rD!</p>
+      <div class="copy-container">
+        <p id="copied"></p>
+        <img
+          src="./images/icon-copy.svg"
+          alt="Copy icon"
+          onclick="copyText();"
+        />
+      </div>
+    </div>
+    <div class="password-info-container">
+      <div class="password-length-container">
+        <p>Character Length</p>
+        <span id="length">10</span>
+      </div>
+      <input
+        type="range"
+        min="0"
+        max="20"
+        id="password-length"
+        onchange="changePasswordLength()"
+      />
+      <div class="checkbox-container">
+        <div>
+          <input type="checkbox" id="uppercase" />
+          <label for="uppercase">Include Uppercase Letters</label>
+        </div>
+        <div>
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Include Lowercase Letters</label>
+        </div>
+        <div>
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">Include Numbers</label>
+        </div>
+        <div>
+          <input type="checkbox" id="symbols" />
+          <label for="symbols">Include Symbols</label>
+        </div>
+      </div>
+      <div class="strength-container">
+        <p>STRENGTH</p>
+        <div class="strength-box-container">
+          <p id="strength-text"></p>
+          <div class="box-container">
+            <div class="strength-box" id="box1"></div>
+            <div class="strength-box" id="box2"></div>
+            <div class="strength-box" id="box3"></div>
+            <div class="strength-box" id="box4"></div>
+          </div>
+        </div>
+      </div>
+      <button class="generate-btn" onclick="generatePassword();">
+        Generate <img src="./images/icon-arrow-right.svg" alt="Arrow" />
+      </button>
+    </div>
+  </body>
+</html>
